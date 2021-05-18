@@ -1,0 +1,30 @@
+# This is base config
+
+[base]
+    debug_mode="debug"
+    time_location="Asia/Chongqing"
+
+[http]
+    addr =":8880"                       # 监听地址, default ":8700"
+    read_timeout = 10                   # 读取超时时长
+    write_timeout = 10                  # 写入超时时长
+    max_header_bytes = 20               # 最大的header大小，二进制位长度
+    allow_ip = [                        # 白名单ip列表
+        "127.0.0.1",
+        "192.168.1.1"
+    ]
+
+[log]
+    log_file_path = "./storage/logs"
+    log_file_name = "system.log"
+
+[cluster]
+    cluster_ip="127.0.0.1"
+    cluster_port="8880"
+    cluster_ssl_port="4880"
+
+[swagger]
+    title="go_gateway_demo swagger API"
+    desc="This is a sample server celler server."
+    host="127.0.0.1:8880"
+    base_path=""
